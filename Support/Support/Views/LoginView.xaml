@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Support.Views.LoginView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Support;assembly:Support"
+    BackgroundColor="#1ABDD4"
+    ControlTemplate="{StaticResource DialogTemplate}">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout
+            Grid.Row="1"
+            Padding="20"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center">
+            <StackLayout
+                Margin="2"
+                Padding="5,5"
+                HorizontalOptions="FillAndExpand"
+                Opacity=".8"
+                Orientation="Horizontal">
+                <Image
+                    Margin="2,0,5,0"
+                    HeightRequest="30"
+                    Source="email.png"
+                    WidthRequest="30" />
+                <local:MyEntry
+                    x:Name="email"
+                    HorizontalOptions="FillAndExpand"
+                    Keyboard="Email"
+                    Placeholder="Email" />
+            </StackLayout>
+            <StackLayout
+                Margin="2"
+                Padding="5,5"
+                HorizontalOptions="FillAndExpand"
+                Opacity=".8"
+                Orientation="Horizontal">
+                <Image
+                    Margin="2,0,5,0"
+                    HeightRequest="30"
+                    Source="password.png"
+                    WidthRequest="30" />
+
+                <local:MyEntry
+                    x:Name="password"
+                    HorizontalOptions="FillAndExpand"
+                    IsPassword="True"
+                    Placeholder="Password" />
+            </StackLayout>
+            <Button
+                x:Name="loginButton"
+                Text="Login"
+                TextColor="#1ABDD4" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

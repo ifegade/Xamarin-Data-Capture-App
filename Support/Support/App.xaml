@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="Support.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+    <Application.Resources>
+        <!--  Application resource dictionary  -->
+        <ResourceDictionary>
+            <ControlTemplate x:Key="DialogTemplate">
+                <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                        <ContentPresenter />
+                    </StackLayout>
+                    <ContentView
+                        x:Name="overlay"
+                        Padding="10,0"
+                        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        BackgroundColor="#C0808080"
+                        IsVisible="{TemplateBinding BindingContext.IsBusy}">
+                        <ActivityIndicator
+                            HeightRequest="70"
+                            HorizontalOptions="CenterAndExpand"
+                            IsRunning="{TemplateBinding BindingContext.IsBusy}"
+                            IsVisible="{TemplateBinding BindingContext.IsBusy}"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="110"
+                            Color="Black" />
+                    </ContentView>
+                </AbsoluteLayout>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

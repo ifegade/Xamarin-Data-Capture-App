@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Support.Views.MenuPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Menu Page">
+    <StackLayout
+        Padding="0,20"
+        BackgroundColor="#F2F2F2"
+        VerticalOptions="Center">
+        <ListView
+            x:Name="listview"
+            HasUnevenRows="False"
+            HorizontalOptions="Center"
+            SeparatorVisibility="Default">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label
+                                HorizontalOptions="Center"
+                                Text="{Binding Title}"
+                                VerticalTextAlignment="Start" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.itex.support" android:installLocation="auto" android:versionName="Maiden" android:versionCode="1">
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="21" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <application android:label="Itex Support" android:icon="@drawable/logo" android:name="android.app.Application" android:allowBackup="true">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/logo" android:label="Support" android:theme="@style/MainTheme" android:name="md5c90de87aed1de882a3163dd2fdbbbd51.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <receiver android:enabled="true" android:label="Connectivity Plugin Broadcast Receiver" android:name="md531e46b185997765898cde66852db2a40.ConnectivityChangeBroadcastReceiver" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.itex.support.mono.MonoRuntimeProvider.__mono_init__" />
+  </application>
+</manifest>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Support.Views.TransactionPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Support;assembly=Support"
+    BackgroundColor="#FFF"
+    ControlTemplate="{StaticResource DialogTemplate}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="1" Margin="10">
+            <local:MyEntry
+                x:Name="deviceId"
+                Margin="0,5"
+                Keyboard="Numeric"
+                Placeholder="REF ID" />
+            <Button
+                x:Name="submitButton"
+                Margin="0,10"
+                Clicked="submitButton_Clicked"
+                Text="Submit"
+                TextColor="#1ABDD4" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

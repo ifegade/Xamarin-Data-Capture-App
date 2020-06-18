@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Support.Views.TerminalPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Support;assembly=Support"
+    Title="Terminal Status"
+    ControlTemplate="{StaticResource DialogTemplate}">
+    <Grid Padding="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <!--<Grid BackgroundColor="#cccccc">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid Margin="1" BackgroundColor="#F5F6F0">
+                    <Label
+                        Margin="5"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="Battery %"
+                        TextColor="#3373A1"
+                        VerticalOptions="Center" />
+                </Grid>
+                <StackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Ok"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <Switch x:Name="battery" Toggled="battery_Toggled" />
+                    <Label
+                        Text="Bad"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>-->
+            <Grid BackgroundColor="#cccccc">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid Margin="1" BackgroundColor="#F5F6F0">
+                    <Label
+                        Margin="5"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="Sticker"
+                        TextColor="#3373A1"
+                        VerticalOptions="Center" />
+                </Grid>
+                <StackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Ok"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <Switch x:Name="sticker" Toggled="sticker_Toggled" />
+                    <Label
+                        Text="Bad"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Column="1" BackgroundColor="#cccccc">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid
+                    Margin="1"
+                    Padding="1"
+                    BackgroundColor="#F5F6F0">
+                    <Label
+                        Margin="5"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="Charger"
+                        TextColor="#3373A1"
+                        VerticalOptions="Center" />
+                </Grid>
+                <StackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Ok"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <Switch x:Name="charger" Toggled="charger_Toggled" />
+                    <Label
+                        Text="Bad"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Column="2" BackgroundColor="#cccccc">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid
+                    Margin="1"
+                    Padding="1"
+                    BackgroundColor="#F5F6F0">
+                    <Label
+                        Margin="5"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="Ref No."
+                        TextColor="#3373A1"
+                        VerticalOptions="Center" />
+                </Grid>
+                <StackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Ok"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <Switch x:Name="ref" Toggled="ref_Toggled" />
+                    <Label
+                        Text="Bad"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid BackgroundColor="#cccccc">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid
+                    Margin="1"
+                    Padding="1"
+                    BackgroundColor="#F5F6F0">
+                    <Label
+                        Margin="5"
+                        HorizontalOptions="Center"
+                        Text="Bank Logo"
+                        TextColor="#3373A1"
+                        VerticalOptions="Center" />
+                </Grid>
+                <StackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Ok"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <Switch x:Name="bank" Toggled="bank_Toggled" />
+                    <Label
+                        Text="Bad"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Column="1" BackgroundColor="#cccccc">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid
+                    Margin="1"
+                    Padding="1"
+                    BackgroundColor="#F5F6F0">
+                    <Label
+                        Margin="5"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="Auth"
+                        TextColor="#3373A1"
+                        VerticalOptions="Center" />
+                </Grid>
+                <StackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Ok"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <Switch x:Name="auth" Toggled="auth_Toggled" />
+                    <Label
+                        Text="Bad"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
+            <Grid Grid.Column="2" BackgroundColor="#cccccc">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid
+                    Margin="1"
+                    Padding="1"
+                    BackgroundColor="#F5F6F0">
+                    <Label
+                        Margin="5"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="Seq No."
+                        TextColor="#3373A1"
+                        VerticalOptions="Center" />
+                </Grid>
+                <StackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Ok"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <Switch x:Name="seq" Toggled="seq_Toggled" />
+                    <Label
+                        Text="Bad"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+        <local:MyEntry
+            x:Name="reason"
+            Grid.Row="2"
+            Margin="0,5"
+            Placeholder="Comment" />
+        <Button
+            x:Name="submitResponse"
+            Grid.Row="3"
+            Margin="20"
+            Clicked="submitResponse_Clicked"
+            HorizontalOptions="FillAndExpand"
+            Text="Submit" />
+    </Grid>
+</ContentPage>
+
+<!--<Grid Grid.Column="1" BackgroundColor="#cccccc">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid
+                    Margin="1"
+                    Padding="1"
+                    BackgroundColor="#F5F6F0">
+                    <Label
+                        Margin="5"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="Printer Mech"
+                        TextColor="#3373A1"
+                        VerticalOptions="Center" />
+                </Grid>
+                <StackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Ok"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <Switch x:Name="printer" Toggled="printer_Toggled"/>
+                    <Label
+                        Text="Bad"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>-->
+<!--<Grid Grid.Column="2" BackgroundColor="#cccccc">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid
+                    Margin="1"
+                    Padding="1"
+                    BackgroundColor="#F5F6F0">
+                    <Label
+                        Margin="5"
+                        HorizontalOptions="Center"
+                        Text="Screen"
+                        TextColor="#3373A1"
+                        VerticalOptions="Center" />
+                </Grid>
+                <StackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Ok"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <Switch  x:Name="screen" Toggled="screen_Toggled"/>
+                    <Label
+                        Text="Bad"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>-->
+<!--
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>-->
+<!--<Grid BackgroundColor="#cccccc">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid
+                    Margin="1"
+                    Padding="1"
+                    BackgroundColor="#F5F6F0">
+                    <Label
+                        Margin="5"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="Thermal Roll C."
+                        TextColor="#3373A1"
+                        VerticalOptions="Center" />
+                </Grid>
+                <StackLayout
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Label
+                        Text="Ok"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                    <Switch x:Name="thermer" Toggled="thermer_Toggled"  />
+                    <Label
+                        Text="Bad"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>-->
+<!--
+
+
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+        </Grid>
+    </Grid>
+</ContentPage>-->

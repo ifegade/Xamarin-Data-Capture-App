@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.itex.support" android:installLocation="auto" android:versionName="Maiden">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="21" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<application android:label="Itex Support" android:icon="@drawable/logo"></application>
+</manifest>
